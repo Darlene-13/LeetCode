@@ -1,11 +1,10 @@
-package io.github.darlene.arrays.assets;
+package io.github.darlene.arrays;
 
 /**
  *  Given a 1-based indexed integer array arr[] that is sorted in non-decreasing order, along with an integer target.
  *  Find two elements in the array such that their sum is equal to target.
  *  If such a pair exists, return the indices of the two elements in increasing order.
  *  If no such pair exists, return [-1, -1].
- */
 /**
  * ALGORITHM
  1. Initialize the left pointer at the beginning of the array.
@@ -17,7 +16,7 @@ package io.github.darlene.arrays.assets;
  d. If the sum is greater than the target, move the right pointer one step to the left.
  4. If no pair is found, return {-1, -1}.
  */
-import java.util.ArrayList;
+
 public class TwoSumSorted {
 
     public int [] twoSumSorted(int [] arr, int target){
@@ -34,7 +33,4 @@ public class TwoSumSorted {
         }
         return new int[]{-1,1};
     }
-
-
-
 }
