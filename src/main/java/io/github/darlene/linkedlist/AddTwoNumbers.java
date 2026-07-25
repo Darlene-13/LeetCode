@@ -1,0 +1,49 @@
+package io.github.darlene.linkedlist;
+
+public class AddTwoNumbers{
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2){
+        //First step is to create  dummy to start us at our new output
+        ListNode dummy = new ListNode(0);
+        // Get a current value pointer
+        ListNode curr = dummy;
+
+        //initialize the carry variable with 0
+        int carry = 0;
+        //Iterate
+        while (l1 !=null || l2 !=null || carry != 0){
+            // Get the values of both l1 and l2 and when either is null the value should then be 0
+            int x = (l1 !=null) ? l1.val: 0;
+            int y = (l2 !=null) ? l2.val: 0;
+
+            // Get the sum
+            int sum =  x + y + carry;
+            int digit = sum % 10; // What we write down.
+            carry = sum/10;
+
+            if(l1 !=null) l1 = l1.next;
+            if(l2 !=null) l2 = l2.next;
+
+            curr.next = new ListNode(digit);
+            curr = curr.next;
+
+
+        }
+
+        return dummy.next;
+    }
+}
+
+
+// Create a listNode
+class ListNode{
+
+    int val;
+    ListNode next;
+    // Constructor
+    ListNode(){}
+    ListNode(int val){this.val = val; }
+    ListNode (int val, ListNode next){this.val = val; this.next = next;}
+
+}
+
