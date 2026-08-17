@@ -1,5 +1,16 @@
 package io.github.darlene.linkedlist;
 
+
+/**
+ * ALGORITHM
+ * We have three params to track the carry value, the digit to write down and the sum
+ * Create a dummy to start us at the new output
+ * Initialize the carry variable to 0
+ * Iterate within the boundaries of when: list node 1 and  2 is not null and carry is not equal to 0
+ * Get the values of l1 and l2 and when either is null we equal it to zero
+ * Get the num of l1 and l2
+ *
+ */
 public class AddTwoNumbers{
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2){
