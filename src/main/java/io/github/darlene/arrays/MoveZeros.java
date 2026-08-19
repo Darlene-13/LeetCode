@@ -6,7 +6,6 @@ public class MoveZeros{
         int posZero = 0;
         for (int i  = 0; i <nums.length; i++){
             if(nums[i] !=0){
-                // What if box i does not need a toy
                 if( i!= posZero){
                     // Take the value at position i and fill it in the current empty slot.
                     nums[posZero] = nums[i];
