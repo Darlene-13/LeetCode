@@ -13,11 +13,11 @@ package io.github.darlene.linkedlist;
 //}
 public class ReverseLinkedList{
     // Method to reverse a linked list
-    public ListNode reverseList(ListNode head){
+    public Node reverseList(Node head){
         // Define the curr, prev, next
-        ListNode curr = head;
-        ListNode prev = null;
-        ListNode next;
+        Node curr = head;
+        Node prev = null;
+        Node next;
 
         while(curr !=null){
             //store next

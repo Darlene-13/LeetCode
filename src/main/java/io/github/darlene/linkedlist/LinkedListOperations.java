@@ -5,25 +5,10 @@ package io.github.darlene.linkedlist;
  */
 public class LinkedListOperations {
 
-}
-
-
-// Class node, components of one node.
-class Node {
-    int val;
-    Node next;
-
-    Node(int val) {
-        this.val = val;
-        this.next = null;  // starts pointing nowhere
-    }
-}
-
-class LinkedList{
     Node dummy;
     int size;
 
-    LinkedList(){
+    LinkedListOperations(){
         dummy = new Node(-1);
         size = 0;
     }
@@ -78,4 +63,6 @@ class LinkedList{
         sb.append("null");
         System.out.println(sb.toString());
     }
+
 }
+

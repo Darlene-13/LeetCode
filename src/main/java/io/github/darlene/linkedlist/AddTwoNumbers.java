@@ -13,11 +13,11 @@ package io.github.darlene.linkedlist;
  */
 public class AddTwoNumbers{
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2){
+    public Node addTwoNumbers(Node l1, Node l2){
         //First step is to create  dummy to start us at our new output
-        ListNode dummy = new ListNode(0);
+        Node dummy = new Node(0);
         // Get a current value pointer
-        ListNode curr = dummy;
+        Node curr = dummy;
 
         //initialize the carry variable with 0
         int carry = 0;
@@ -35,7 +35,7 @@ public class AddTwoNumbers{
             if(l1 !=null) l1 = l1.next;
             if(l2 !=null) l2 = l2.next;
 
-            curr.next = new ListNode(digit);
+            curr.next = new Node(digit);
             curr = curr.next;
 
 
@@ -45,16 +45,4 @@ public class AddTwoNumbers{
     }
 }
 
-
-// Create a listNode
-class ListNode{
-
-    int val;
-    ListNode next;
-    // Constructor
-    ListNode(){}
-    ListNode(int val){this.val = val; }
-    ListNode (int val, ListNode next){this.val = val; this.next = next;}
-
-}
 
