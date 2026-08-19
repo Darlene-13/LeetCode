@@ -1,19 +1,17 @@
 package io.github.darlene.linkedlist;
 
-//class Node{
-//    int val;
-//    Node next;
-//
-//    Node(){}
-//    Node(int val){
-//        this.val = val;
-//    }
-//    Node(int val, Node next){
-//        this.val = val;
-//        this.next = next;
-//    }
-//}
+
 public class FindLength{
 
+    public int findLength(Node head){
+        int count = 0;
+        Node current = head;
+        while (current != null){
+            //Increment the count.
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
 }
 
