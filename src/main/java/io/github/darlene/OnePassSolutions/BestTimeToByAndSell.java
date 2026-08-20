@@ -7,8 +7,7 @@ public class BestTimeToByAndSell {
         int maxProfit = 0;
         for (int i = 1; i < prices.length; i++){
             minSoFar = Math.min(minSoFar, prices[i]);
-            int residue  = prices[i] - minSoFar;
-            maxProfit = Math.max(residue, maxProfit);
+            maxProfit = Math.max(prices[i] - minSoFar, maxProfit);
         }
         return maxProfit;
     }
