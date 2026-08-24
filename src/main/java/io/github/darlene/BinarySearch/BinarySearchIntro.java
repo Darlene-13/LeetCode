@@ -8,11 +8,10 @@ public class BinarySearchIntro{
         while (low <= high){
             // Find the middle
             int mid = low + ((high - low)/2);
-            int guess = arr[mid];
-            if (guess == item){
+            if (arr[mid] == item){
                 System.out.println("Found the item: " + item);
                 return mid;
-            } else if (guess > item){
+            } else if (arr[mid]> item){
                 high = mid -1;
             } else{
                 low = mid + 1;

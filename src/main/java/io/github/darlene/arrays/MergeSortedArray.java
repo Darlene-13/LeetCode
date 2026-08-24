@@ -11,6 +11,7 @@ public class MergeSortedArray{
 
         //Check if there are still elements at nums 2, the pointer should point to - 1
         while (lastNums2 >= 0){
+
             if (lastNums1 < 0){
                 nums1[nums1Right] = nums2[lastNums2];
                 lastNums2 --;
