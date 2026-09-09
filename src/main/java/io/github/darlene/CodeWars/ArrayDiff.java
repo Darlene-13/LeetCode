@@ -2,7 +2,10 @@ package io.github.darlene.CodeWars;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class ArrayDiff{
@@ -27,5 +30,14 @@ public class ArrayDiff{
         }
         return lista;
 
+    }
+
+
+    //Alternatively but the streaming method has a lot of memory overhead.
+    public static int [] arrayDifference(int [] a, int [] b){
+        List<Integer> listA = Arrays.stream(a).boxed().collect(Collectors.toList());
+        List<Integer> listB = Arrays.stream(b).boxed().collect(Collectors.toList());
+        listA.removeAll(listB);
+        return listA.stream().mapToInt(e -> e).toArray();
     }
 }
