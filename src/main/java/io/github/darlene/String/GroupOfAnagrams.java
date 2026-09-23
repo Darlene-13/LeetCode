@@ -1,4 +1,4 @@
-package io.github.darlene.arrays;
+package io.github.darlene.String;
 
 
 import java.util.ArrayList;
@@ -31,7 +31,6 @@ public class GroupOfAnagrams{
             char [] chars = word.toCharArray();
             Arrays.sort(chars);
             String key = new String(chars);
-
             if (!map.containsKey(key)){
                 map.put(key, new ArrayList<>());
             }

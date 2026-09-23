@@ -1,6 +1,6 @@
 package io.github.darlene.linkedlist;
 
-//class ListNode{
+// class ListNode{
 //    int val;
 //    ListNode next;
 //

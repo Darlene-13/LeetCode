@@ -1,6 +1,5 @@
 package io.github.darlene.linkedlist;
 
-
 public class Node{
     int val;
     Node next;
