@@ -21,4 +21,19 @@ public class DailyTemperatures {
 
         return answer;
     }
+
+
+    public int [] findTemps(int [] temperatures){
+        Stack<Integer> stack = new Stack<>();
+        int [] answer = new int[temperatures.length];
+        for(int i = 0; i < temperatures.length; i++){
+            while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]){
+                int previous = stack.pop();
+                answer[previous] = i - previous;
+            }
+            stack.push(i);
+        }
+
+        return answer;
+    }
 }
