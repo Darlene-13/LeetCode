@@ -1,7 +1,7 @@
 package io.github.darlene;
 
 
-import io.github.darlene.arrays.TwoSum;
+import io.github.darlene.PlayGround.arrays.TwoSum;
 import java.util.Arrays;
 
 public class Main {
