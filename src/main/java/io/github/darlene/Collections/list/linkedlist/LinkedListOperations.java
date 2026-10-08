@@ -5,17 +5,17 @@ package io.github.darlene.Collections.list.linkedlist;
  */
 public class LinkedListOperations {
 
-    Node dummy;
+    ListNode dummy;
     int size;
 
     LinkedListOperations(){
-        dummy = new Node(-1);
+        dummy = new ListNode(-1);
         size = 0;
     }
 
     // Method to insert at the head
     void insertAtHead(int val){
-        Node newNode = new Node(val);
+        ListNode newNode = new ListNode(val);
         newNode.next = dummy.next; // always points to the real first node.
         dummy.next = newNode;
         size++;
@@ -25,8 +25,8 @@ public class LinkedListOperations {
     //Insert at tail
     //Any time we insert we need to create a new Node that takes in any value
     void insertAtTail(int val){
-        Node newNode = new Node(val);
-        Node curr = dummy;
+        ListNode newNode = new ListNode(val);
+        ListNode curr = dummy;
 
         //We can only insert if it is null, we always insert at the dummy
         while(curr.next != null){
@@ -39,7 +39,7 @@ public class LinkedListOperations {
 
     // Delete a node by value
     void delete(int val){
-        Node curr = dummy;
+        ListNode curr = dummy;
         while (curr.next !=null && curr.next.val != val){
             curr = curr.next;
         }
@@ -53,7 +53,7 @@ public class LinkedListOperations {
 
     //Traversal/ print for debugging......
     void traverseLinkedList(){
-        Node curr = dummy.next; // We do not start from the dummy
+        ListNode curr = dummy.next; // We do not start from the dummy
         StringBuilder sb = new StringBuilder();
         while (curr != null){
             sb.append(curr.val).append("->");

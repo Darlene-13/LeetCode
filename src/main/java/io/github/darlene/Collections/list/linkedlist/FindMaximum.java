@@ -2,12 +2,12 @@ package io.github.darlene.Collections.list.linkedlist;
 
 public class FindMaximum {
 
-    public int findMax(Node head){
+    public int findMax(ListNode head){
         if (head == null){
             return 0;
         }
 
-        Node current = head;
+        ListNode current = head;
         int currentMax = head.val;
 
         while (current !=null){

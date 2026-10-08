@@ -3,11 +3,11 @@ package io.github.darlene.Collections.list.linkedlist;
 public class LinkedList{
 
 
-    public Node reverseLinkedList(Node head){
+    public ListNode reverseLinkedList(ListNode head){
         // Get the three pointers
-        Node curr = head;
-        Node prev = null;
-        Node next;
+        ListNode curr = head;
+        ListNode prev = null;
+        ListNode next;
 
         while (curr != null){
             next = curr.next;
