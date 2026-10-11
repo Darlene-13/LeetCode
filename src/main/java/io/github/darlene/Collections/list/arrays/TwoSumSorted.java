@@ -1,4 +1,4 @@
-package io.github.darlene.PlayGround.arrays;
+package io.github.darlene.Collections.list.arrays;
 
 /**
  *  Given a 1-based indexed integer array arr[] that is sorted in non-decreasing order, along with an integer target.

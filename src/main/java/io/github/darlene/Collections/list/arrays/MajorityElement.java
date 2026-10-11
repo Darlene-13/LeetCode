@@ -1,4 +1,4 @@
-package io.github.darlene.PlayGround.arrays;
+package io.github.darlene.Collections.list.arrays;
 
 public class MajorityElement{
     public int majorElement(int [] nums){

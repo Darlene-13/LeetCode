@@ -1,4 +1,4 @@
-package io.github.darlene.PlayGround.arrays;
+package io.github.darlene.Collections.list.arrays;
 
 public class BestPriceToBuy{
     public int maximumProfit(int [] prices){

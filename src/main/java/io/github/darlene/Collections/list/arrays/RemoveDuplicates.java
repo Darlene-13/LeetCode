@@ -1,4 +1,4 @@
-package io.github.darlene.PlayGround.arrays;
+package io.github.darlene.Collections.list.arrays;
 
 import java.util.HashSet;
 
