@@ -36,4 +36,39 @@ public class IsPalindrome {
 
         return true;
     }
+
+    public boolean isValidPalindrome(ListNode head){
+        //Use fast and slow pointers
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next !=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        ListNode current = slow;
+        ListNode prev = null;
+        ListNode next;
+
+        while (current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        ListNode first = slow;
+        ListNode second = prev;
+
+        while(first != null && second != null){
+            if(first.val != second.val){
+                return false;
+            }
+
+            first = first.next;
+            second = second.next;
+        }
+
+        return true;
+    }
 }

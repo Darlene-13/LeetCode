@@ -29,4 +29,52 @@ public class RemoveNthNode {
         return head;
 
     }
+
+    public ListNode removeNthNode2 (ListNode head, int n){
+        ListNode current = head;
+        int length = 0;
+        while(current != null){
+            length ++;
+            current = current.next;
+
+        }
+
+        //Edge case
+        if (length == n){
+            return head;
+        }
+        current = head;
+        int steps = length - n - 1;
+        for (int i = 0; i < steps; i++){
+            current = current.next;
+        }
+
+        current = current.next.next;
+
+        return head;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
