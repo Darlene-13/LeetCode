@@ -7,7 +7,7 @@ import java.util.Deque;
 public class MyQueues {
     private Deque<Integer> input;
     private Deque<Integer> output;
-    public MyQueues{
+    public MyQueues() {
         input = new ArrayDeque<>();
         output = new ArrayDeque<>();
     }
