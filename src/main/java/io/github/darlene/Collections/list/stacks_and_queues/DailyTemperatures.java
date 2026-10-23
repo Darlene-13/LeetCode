@@ -1,4 +1,4 @@
-package io.github.darlene.Collections.list.stack;
+package io.github.darlene.Collections.list.stacks_and_queues;
 
 import java.util.Stack;
 

@@ -1,19 +1,15 @@
-package io.github.darlene.Collections.list.stack;
-
+package io.github.darlene.Collections.list.stacks_and_queues;
 
 import java.util.Stack;
 
-public class ValidParenthesis{
-
+public class IsValid {
     public boolean isValid(String s){
-        // Create a new stack
+        //Create a new Stack
         Stack<Character> stack = new Stack<>();
-        //Iterate through the string
         for (int i = 0; i < s.length(); i++){
-            // Get the current
+            // Get the first character
             char current = s.charAt(i);
             if(current == '{' || current == '[' || current == '('){
-                //push it to the stack
                 stack.push(current);
             } else if (current == '}' || current == ']' || current == ')'){
                 if (stack.isEmpty()){
@@ -23,16 +19,18 @@ public class ValidParenthesis{
                 if (current == '}' && stack.peek() != '{'){
                     return false;
                 }
-                if (current == ')' && stack.peek() != '('){
-                    return false;
-                } if (current == ']' && stack.peek() !='['){
+                if (current == ']' && stack.peek() != '['){
                     return false;
                 }
+
+                if (current == ')' && stack.peek() != '('){
+                    return false;
+                }
+
                 stack.pop();
             }
         }
 
         return stack.isEmpty();
-
     }
 }
