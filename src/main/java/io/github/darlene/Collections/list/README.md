@@ -8,7 +8,7 @@ For the theory behind the List interface and its implementations, see [List.md](
 
 * [arrays/](arrays/README.md) -> array problems.
 * [linkedlist/](linkedlist/README.md) -> linked list problems.
-* [stack/](stack/README.md) -> stack problems.
+* [stack/](stacks_and_queues/README.md) -> stack problems.
 
 ---
 
